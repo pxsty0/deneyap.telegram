@@ -1,6 +1,6 @@
 # deneyap.telegram
 ## Telegram Library for ESP32 / Deneyap Cards
-Örnek Kullanım 
+Örnek Kullanım / Example Usage
 
 ```cpp
 #include <WiFi.h>
