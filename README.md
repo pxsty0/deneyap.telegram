@@ -1,14 +1,15 @@
 # deneyap.telegram
-## Deneyap Kart ve ESP32 ile Kullanabileceğiniz Telegram'a Mesaj Gönderen Kütüphane
+## Telegram Library for ESP32 / Deneyap Cards
 Örnek Kullanım 
+
 ```cpp
 #include <WiFi.h>
 #include <DeneyapTelegram.h>
 
 DeneyapTelegram telegram;
 
-#define WIFI_SSID "" // Wifi Adı
-#define WIFI_PASS "" // Wifi Şifresi
+#define WIFI_SSID "WIFI ADI" 
+#define WIFI_PASS "WIFI SİFRESİ" 
 
 void setup()
 {
@@ -20,13 +21,15 @@ void setup()
     Serial.print(".");
   }
   Serial.println("Baglandi");
-  telegram.begin(""); // Telegram Bot Tokeniniz
-  // telegram.kurulum(""); // Telegram Bot Tokeniniz
-  telegram.send("", ""); // Kanal ID ve Mesaj
-  // telegram.gonder("", ""); // Kanal ID ve Mesaj
+  telegram.begin("TELEGRAM BOT TOKENİNİNZ"); // Telegram BOTFATHER ile alınacak
+  // telegram.kurulum("TELEGRAM BOT TOKENİNİNZ"); 
+  telegram.send("CHAT IDNİZ", "Merhaba !"); // Telegram GET MY ID bot üzerinden /start komutu ile alınacak
+  // telegram.gonder("CHAT IDNİZ", "Merhaba !"); // Kanal ID ve Mesaj
 }
 
 void loop()
 {
 }
+
+
 ```
